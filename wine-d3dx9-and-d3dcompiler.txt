@@ -1,0 +1,11 @@
+Wine's own d3dx9_*.dll and d3dcompiler_*.dll may produce invalid shader
+bytecode incompatible with D9VK. Install original implementations of
+these DLLs from Microsoft to circumvent possible problems.
+
+Original DLLs can be installed using winetricks. Correct version depends
+on what particular application is trying to load. There is a way to
+install all versions known to winetricks:
+
+    winetricks d3dx9 $( winetricks dlls list | sed -rn "s,^(d3dcompiler_[0-9]+).*$,\1,p" )
+
+Link to the discussion: https://github.com/Joshua-Ashton/d9vk/issues/200
