@@ -7,7 +7,7 @@
 %endif
 
 Name:           wine-d9vk
-Version:        0.30
+Version:        0.40.1
 Release:        1%{?dist}
 Summary:        A Direct3D9 to Vulkan layer using the DXVK backend
 
@@ -115,5 +115,8 @@ echo "Please read %{_docdir}/%{name}/wine-d3dx9-and-d3dcompiler.txt" >&2
 %{_libdir}/wine/d3d9.dll.so
 
 %changelog
+* Sun Dec 15 2019 Ivan Mironov <mironov.ivan@gmail.com> - 0.40.1-1
+- Bump to upstream version 0.40.1
+
 * Wed Dec 11 2019 Ivan Mironov <mironov.ivan@gmail.com> - 0.30-1
 - Initial version of the package
